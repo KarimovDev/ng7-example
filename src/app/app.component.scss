@@ -1,7 +1,18 @@
-.wrapper {
+.layout {
   display: flex;
-  flex-direction: row;
   height: 100%;
+
+  &__side {
+    flex: 0 0 300px;
+    overflow: auto;
+    margin-top: 60px;
+  }
+
+  &__main {
+    flex: 1 1 auto;
+    overflow: auto;
+    margin-top: 60px;
+  }
 }
 
 .loader-overlay {

@@ -28,7 +28,6 @@ export class ReceiveComponent implements OnInit {
     if (!this.pending) {
       const limit = this.limitCtrl.value;
       this.http.postForm({ limit }).subscribe(res => {
-        this.storage.setSessionStorageValue(this.LIMIT_KEY, limit);
         this.notifications.showMessage(`Лимит ${limit} установлен`);
       });
     }
@@ -64,6 +63,9 @@ export class ReceiveComponent implements OnInit {
           emitEvent: false,
         });
       }
+
+      const limit = this.limitCtrl.value;
+      this.storage.setSessionStorageValue(this.LIMIT_KEY, limit);
     });
   }
 }

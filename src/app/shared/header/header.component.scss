@@ -1,21 +1,29 @@
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 60px;
-  width: 100%;
   background-color: #fffece;
-  flex-shrink: 1;
   border-bottom: 1px grey solid;
 }
 
 .logo {
   display: flex;
+  flex: 0 0 60px;
   justify-content: center;
   background-color: purple;
-  width: 60px;
   font-size: 60px;
   line-height: 60px;
   color: white;
   margin-right: 30px;
+}
+
+.content {
+  flex: 1 1 auto;
 }

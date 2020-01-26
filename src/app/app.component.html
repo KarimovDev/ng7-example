@@ -7,7 +7,11 @@
 <ng7-header>
   ООО "Ромашка"
 </ng7-header>
-<div class="wrapper">
-  <ng7-sidebar></ng7-sidebar>
-  <router-outlet></router-outlet>
+<div class="layout">
+  <div class="layout__side">
+    <ng7-sidebar></ng7-sidebar>
+  </div>
+  <div class="layout__main">
+    <router-outlet></router-outlet>
+  </div>
 </div>
