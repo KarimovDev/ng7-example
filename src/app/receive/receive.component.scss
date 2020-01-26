@@ -1,0 +1,13 @@
+.receive {
+  &__container {
+    padding: 0 40px;
+  }
+
+  &__limit {
+    margin-top: 20px;
+    &_input {
+      width: 300px;
+      margin-right: 30px;
+    }
+  }
+}

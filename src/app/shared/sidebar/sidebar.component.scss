@@ -1,0 +1,22 @@
+.sidebar {
+  &__container {
+    width: 200px;
+    overflow-y: auto;
+    border-right: 1px grey solid;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.link {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+
+  &__active {
+    color: orange;
+  }
+}

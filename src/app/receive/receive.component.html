@@ -1,0 +1,25 @@
+<div class="receive__container">
+  <h1>Увеличить лимит в Facebook</h1>
+  <div>Укажите сумму на которую нужно увеличить лимит</div>
+  <div class="receive__limit">
+    <mat-form-field class="receive__limit_input">
+      <input
+        matInput
+        min="0"
+        type="number"
+        placeholder="Введите лимит"
+        [formControl]="limitCtrl"
+      />
+      <mat-error *ngIf="limitCtrl.hasError('required')">
+        Необходимо ввести значение
+      </mat-error>
+      <mat-error *ngIf="limitCtrl.hasError('min')">
+        Нельзя указать меньше
+        {{ limitCtrl.getError('min').min }}
+      </mat-error>
+    </mat-form-field>
+    <button (click)="receiveClick()" mat-raised-button color="primary">
+      ПЕРЕВОД
+    </button>
+  </div>
+</div>
