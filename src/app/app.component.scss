@@ -3,8 +3,9 @@
   height: 100%;
 
   &__side {
-    flex: 0 0 300px;
+    flex: 0 0 auto;
     overflow: auto;
+    border-right: 1px grey solid;
     margin-top: 60px;
   }
 
