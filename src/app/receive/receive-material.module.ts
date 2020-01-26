@@ -7,4 +7,4 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [MatFormFieldModule, MatInputModule, MatButtonModule],
   exports: [MatFormFieldModule, MatInputModule, MatButtonModule],
 })
-export class UiKitModule {}
+export class ReceiveMaterialModule {}

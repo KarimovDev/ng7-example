@@ -3,3 +3,36 @@
   flex-direction: row;
   height: 100%;
 }
+
+.loader-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.load-indicator {
+  opacity: 0;
+  overflow: hidden;
+  animation-delay: 300ms;
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  animation-name: load-indicator-animation;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+}
+
+@keyframes load-indicator-animation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

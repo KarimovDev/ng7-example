@@ -4,9 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:mock": "ng serve --configuration=mock",
     "build": "ng build",
+    "build:mock": "ng build --configuration=mock",
+    "build:prod": "ng build --prod",
     "test": "ng test",
-    "lint": "ng lint",
+    "format": "prettier --write {\"src/app/**/*\",\"src/style.scss\",\"src/index.html\"}",
+    "lint": "tslint -c tslint.json -p tsconfig.json \"src/**/*.ts\"",
+    "lint:ng": "ng lint",
+    "lint:fix": "tslint -c tslint.json -p tsconfig.json --fix \"src/**/*.ts\"",
     "e2e": "ng e2e"
   },
   "private": true,
