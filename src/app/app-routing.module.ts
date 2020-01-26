@@ -6,7 +6,8 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 const routes: Routes = [
   {
     path: 'receive',
-    loadChildren: () => import('./receive/receive.module').then(m => m.ReceiveModule),
+    loadChildren: () =>
+      import('./receive/receive.module').then(m => m.ReceiveModule),
   },
   {
     path: '',
