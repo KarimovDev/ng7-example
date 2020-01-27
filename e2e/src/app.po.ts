@@ -44,4 +44,12 @@ export class AppPage {
       )
     );
   }
+
+  getTitle() {
+    return element(
+      by.xpath(
+        '/html[1]/body[1]/ng7-root[1]/div[1]/div[2]/ng7-receive[1]/div[1]/h1[1]'
+      )
+    );
+  }
 }

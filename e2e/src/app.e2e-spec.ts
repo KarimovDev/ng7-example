@@ -28,11 +28,30 @@ describe('workspace-project App', () => {
   it('should save limit value in session', () => {
     page.navigateTo();
     page.getNavButtonSecond().click();
+    page.getInput().clear();
     page.getInput().sendKeys('11.12');
     page.getNavButtonFirst().click();
     page.getNavButtonSecond().click();
 
     expect(page.getInput().getAttribute('value')).toEqual('11.12');
+  });
+
+  it('should mask limit value', () => {
+    page.navigateTo();
+    page.getNavButtonSecond().click();
+    page.getInput().clear();
+    page.getInput().sendKeys('11.1123');
+
+    expect(page.getInput().getAttribute('value')).toEqual('11.11');
+  });
+
+  it('should set only digits in limit', () => {
+    page.navigateTo();
+    page.getNavButtonSecond().click();
+    page.getInput().clear();
+    page.getInput().sendKeys('asd dsa');
+
+    expect(page.getInput().getAttribute('value')).toEqual('');
   });
 
   afterEach(async () => {
